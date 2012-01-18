@@ -2,7 +2,6 @@ package com.vitormp.guava;
 
 import com.google.common.base.Objects;
 
-
 public class Book {
 
 	private Integer id;

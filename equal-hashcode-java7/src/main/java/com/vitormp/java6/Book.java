@@ -1,6 +1,5 @@
 package com.vitormp.java6;
 
-
 public class Book {
 
 	private Integer id;

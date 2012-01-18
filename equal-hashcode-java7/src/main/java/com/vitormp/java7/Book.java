@@ -1,5 +1,7 @@
 package com.vitormp.java7;
 
+import java.util.Objects;
+
 
 public class Book {
 
@@ -32,13 +34,13 @@ public class Book {
 		}
 		if(obj instanceof Book){
 			Book other = (Book)obj;
-			return this.getId().equals(other.getId()) &&
-					this.getTotalPages().equals(other.getTotalPages());
+			return Objects.equals(this.getId(), other.getId()) &&
+					Objects.equals(this.getTotalPages(), other.getTotalPages());
 		}
 		return false;
 	}
 
 	public int hashCode(){
-		return (this.getId() + this.getTotalPages() % 97);
+		return Objects.hash(this.getId(), this.getTotalPages());
 	}
 }
